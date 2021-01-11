@@ -1,5 +1,4 @@
 # React Komponenter
-![""](hero.jpeg)
 
 ## Opgavebeskrivelse
 I de næste par dage skal du arbejde med at fremstille en kollektion af UI komponenter.
