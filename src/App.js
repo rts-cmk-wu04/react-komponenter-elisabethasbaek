@@ -1,8 +1,15 @@
-import "./index.css";
+import "./style/App.css";
+import PrettyBox from "./components/PrettyBox.js";
 
 function App() {
   return (
-    null
+    <>
+      <main className="main">
+        <section className="prettyBoxes">
+          <PrettyBox />
+        </section>
+      </main>
+    </>
   )
 };
 
