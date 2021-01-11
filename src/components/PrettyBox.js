@@ -1,27 +1,28 @@
 import { useState, useEffect } from "react";
-import PrettyBoxContent from "./PrettyBoxContent";
+import "../style/PrettyBox.css";
 
-function PrettyBox() {
-  var [content, setContent] = useState([]);
+function PrettyBox(props, {image, heading, text}) {
+    var [content, setContent] = useState([]);
 
-  useEffect(function () {
-    fetch("./data/prettyboxes.json")
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data);
-        setContent(data);
-      });
-  }, []);
-
-  return (
-    <>
-      {content.map(function (cunt) {
-        return <PrettyBoxContent key={cunt.heading} cunt={cunt} />
-      })}
-    </>
-  )
+    useEffect(function () {
+        fetch("./data/prettyboxes.json")
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            setContent(data);
+        });
+    }, []);
+    
+    return (
+        <>
+            <article className="prettyBox" style={{backgroundColor:props.bGcolor}}>
+                <img src={image} alt="" className="prettyBox__image"/>
+                <h1 className="prettyBox__heading">{heading}</h1>
+                <p className="prettyBox__text">{text}</p>
+            </article>
+        </>
+    )
 };
 
-export default PrettyBox; 
+export default PrettyBox;

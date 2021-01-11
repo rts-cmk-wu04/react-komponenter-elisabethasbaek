@@ -1,13 +1,11 @@
 import "./style/App.css";
-import PrettyBox from "./components/PrettyBox.js";
+import PrettyBoxes from "./components/PrettyBoxes";
 
 function App() {
   return (
     <>
       <main className="main">
-        <section className="prettyBoxes">
-          <PrettyBox />
-        </section>
+        <PrettyBoxes />
       </main>
     </>
   )
