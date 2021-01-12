@@ -1,14 +1,9 @@
-import "./style/App.css";
-import PrettyBoxes from "./components/PrettyBoxes";
+import "./index.css";
 
 function App() {
   return (
-    <>
-      <main className="main">
-        <PrettyBoxes />
-      </main>
-    </>
+    null
   )
 };
 
-export default App; /* being rendered in ./index.js */
+export default App;
